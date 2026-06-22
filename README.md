@@ -46,6 +46,8 @@ This site is deployed on Netlify at [https://floremuguet.netlify.app](https://fl
 
 The production domain [https://www.floremuguet.com](https://www.floremuguet.com) is configured as a custom domain (CNAME) pointing to the Netlify site. Netlify handles HTTPS for both the `*.netlify.app` subdomain and the custom domain.
 
+⚠️ Changes to this GitHub repository are automatically deployed to Netlify (typically within 2-3 minutes).
+
 ## Deploy to Netlify
 
 ### Option 1: Git-based deploy (recommended)
