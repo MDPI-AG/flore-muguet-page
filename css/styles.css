@@ -1,0 +1,267 @@
+/* Flore Muguet — static site styles */
+
+:root {
+  --color-bg: #faf9f7;
+  --color-surface: #ffffff;
+  --color-text: #1a1a2e;
+  --color-text-muted: #5c5c6e;
+  --color-accent: #2d4a6f;
+  --color-accent-hover: #1e3554;
+  --color-border: #e8e6e1;
+  --font-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --max-width: 960px;
+  --spacing: 1.5rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  transition: color 0.15s ease;
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--color-accent-hover);
+}
+
+/* Layout */
+
+.site-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing);
+}
+
+/* Header */
+
+.site-header {
+  padding: 2.5rem 0 2rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.site-header__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.site-title {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.site-title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-title a:hover,
+.site-title a:focus-visible {
+  color: var(--color-accent);
+}
+
+.site-email {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.site-email a {
+  color: var(--color-text-muted);
+  text-decoration: none;
+}
+
+.site-email a:hover,
+.site-email a:focus-visible {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+.profile-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  margin: 0.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.profile-links a {
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.profile-links a:hover,
+.profile-links a:focus-visible {
+  text-decoration: underline;
+}
+
+/* Main content */
+
+.site-main {
+  flex: 1;
+  padding: 2.5rem 0 3rem;
+}
+
+.biography {
+  display: grid;
+  gap: 2rem;
+  align-items: start;
+}
+
+@media (min-width: 640px) {
+  .biography {
+    grid-template-columns: minmax(200px, 280px) 1fr;
+    gap: 2.5rem;
+  }
+}
+
+.biography__photo {
+  margin: 0;
+}
+
+.biography__photo picture,
+.biography__photo img {
+  border-radius: 4px;
+  box-shadow: 0 4px 24px rgba(26, 26, 46, 0.1);
+}
+
+.biography__photo figcaption {
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+.biography__content h2 {
+  margin: 0 0 1.25rem;
+  font-family: var(--font-serif);
+  font-size: clamp(1.35rem, 3vw, 1.65rem);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.biography__content p {
+  margin: 0 0 1.1rem;
+  max-width: 65ch;
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.biography__content p:last-child {
+  margin-bottom: 0;
+}
+
+/* CV section */
+
+.cv-section {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--color-border);
+  text-align: center;
+}
+
+.cv-section p {
+  margin: 0 0 0.75rem;
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+}
+
+.cv-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.25rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-surface);
+  background-color: var(--color-accent);
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.15s ease;
+}
+
+.cv-link:hover,
+.cv-link:focus-visible {
+  color: var(--color-surface);
+  background-color: var(--color-accent-hover);
+}
+
+.cv-link svg {
+  flex-shrink: 0;
+}
+
+/* Footer */
+
+.site-footer {
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--color-border);
+  background-color: var(--color-surface);
+}
+
+.site-footer p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+/* Accessibility */
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+}
