@@ -33,6 +33,10 @@ body {
   color: var(--color-text);
   background-color: var(--color-bg);
   -webkit-font-smoothing: antialiased;
+  background-image: url(/assets/background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 img {
@@ -59,6 +63,10 @@ a:focus-visible {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
 }
 
 .container {
