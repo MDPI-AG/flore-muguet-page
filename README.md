@@ -1,6 +1,8 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8f5f2ad6-52c3-4376-937f-84e36d69bedc/deploy-status)](https://app.netlify.com/projects/floremuguet/deploys)
+
 # Flore Muguet — Personal Website
 
-Static HTML/CSS site for [floremuguet.com](https://www.floremuguet.com/), migrated from WordPress to a fast, dependency-free deployment on Netlify.
+Static HTML/CSS site for [floremuguet.com](https://www.floremuguet.com/), deployed on [Netlify](https://floremuguet.netlify.app) and migrated from WordPress.
 
 ## Overview
 
@@ -38,6 +40,12 @@ npx serve .
 
 Then open [http://localhost:8000](http://localhost:8000).
 
+## Deployment
+
+This site is deployed on Netlify at [https://floremuguet.netlify.app](https://floremuguet.netlify.app).
+
+The production domain [https://www.floremuguet.com](https://www.floremuguet.com) is configured as a custom domain (CNAME) pointing to the Netlify site. Netlify handles HTTPS for both the `*.netlify.app` subdomain and the custom domain.
+
 ## Deploy to Netlify
 
 ### Option 1: Git-based deploy (recommended)
@@ -47,7 +55,8 @@ Then open [http://localhost:8000](http://localhost:8000).
 3. Build settings:
    - **Build command:** *(leave empty)*
    - **Publish directory:** `.` (root)
-4. Connect the custom domain `www.floremuguet.com` in Netlify DNS settings.
+4. The site will be available at `https://floremuguet.netlify.app` (or your assigned `*.netlify.app` subdomain).
+5. To use the main domain, add `www.floremuguet.com` as a custom domain in Netlify (**Domain management** → **Add a domain**). Netlify will provide DNS records (typically a CNAME for `www` pointing to the Netlify site) to configure at your domain registrar.
 
 ### Option 2: Manual deploy
 
