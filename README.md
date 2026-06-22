@@ -26,20 +26,6 @@ A single-page biography site for Flore Muguet, doctor in social anthropology aff
 └── README.md
 ```
 
-## Local preview
-
-Serve the project root with any static file server:
-
-```bash
-# Python 3
-python3 -m http.server 8000
-
-# Node.js (npx)
-npx serve .
-```
-
-Then open [http://localhost:8000](http://localhost:8000).
-
 ## Deployment
 
 This site is deployed on Netlify at [https://floremuguet.netlify.app](https://floremuguet.netlify.app).
@@ -47,22 +33,6 @@ This site is deployed on Netlify at [https://floremuguet.netlify.app](https://fl
 The production domain [https://www.floremuguet.com](https://www.floremuguet.com) is configured as a custom domain (CNAME) pointing to the Netlify site. Netlify handles HTTPS for both the `*.netlify.app` subdomain and the custom domain.
 
 ⚠️ Changes to this GitHub repository are automatically deployed to Netlify (typically within 2-3 minutes).
-
-## Deploy to Netlify
-
-### Option 1: Git-based deploy (recommended)
-
-1. Push this repository to GitHub/GitLab/Bitbucket.
-2. In [Netlify](https://app.netlify.com/), create a new site from the repository.
-3. Build settings:
-   - **Build command:** *(leave empty)*
-   - **Publish directory:** `.` (root)
-4. The site will be available at `https://floremuguet.netlify.app` (or your assigned `*.netlify.app` subdomain).
-5. To use the main domain, add `www.floremuguet.com` as a custom domain in Netlify (**Domain management** → **Add a domain**). Netlify will provide DNS records (typically a CNAME for `www` pointing to the Netlify site) to configure at your domain registrar.
-
-### Option 2: Manual deploy
-
-Drag and drop the project folder onto the [Netlify Drop](https://app.netlify.com/drop) page.
 
 ## SEO
 
@@ -82,6 +52,20 @@ Drag and drop the project folder onto the [Netlify Drop](https://app.netlify.com
 ## Updating content
 
 Edit `index.html` directly for text changes. Replace files in `assets/` for new portrait or CV versions, then update the `lastmod` date in `sitemap.xml` if needed.
+
+## Local preview
+
+Serve the project root with any static file server:
+
+```bash
+# Python 3
+python3 -m http.server 8000
+
+# Node.js (npx)
+npx serve .
+```
+
+Then open [http://localhost:8000](http://localhost:8000).
 
 ## License
 
